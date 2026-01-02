@@ -1,10 +1,12 @@
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (
     <>
       <main>
-        <h1>Private Notes</h1>
+        <header class="page-header">
+          <h1 class="page-header__title">Private Notes</h1>
+        </header>
       </main>
     </>
   );

@@ -1,14 +1,23 @@
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Login from "../pages/Login";
+import Dashboard from "../pages/Dashboard";
 import "./App.scss";
 
 function App() {
   return (
-    <>
-      <main>
-        <header class="page-header">
-          <h1 class="page-header__title">Private Notes</h1>
-        </header>
-      </main>
-    </>
+    <BrowserRouter>
+      {/* Global nav */}
+      <nav>
+        <Link to="/Login">Login</Link>
+        <Link to="/Dashboard">Dashboard</Link>
+      </nav>
+
+      {/* Routes */}
+      <Routes>
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
